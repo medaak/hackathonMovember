@@ -1,25 +1,23 @@
 class membreEditController {
     constructor(membreService) {
-      this.membreService = membreService;
-      this.load();
+        this.membreService = membreService;
+        this.load();
 
     };
 
     load() {
-      this.memberID="58237d189713dc551eaa986a"
-      console.log(this.memberID);
-
+        this.memberID = "58237d189713dc551eaa986a"
         this.membreService.getOne(this.memberID).then((res) => {
-
-            this.membre = res.data;
+        this.membre = res.data;
         })
     }
 
     update(membre) {
-        this.membreService.update(membre._id, membre.pseudoMembre, membre.nomMembre, membre.prenomMembre, membre.photoMoustacheMembre, membre.noteMoustacheMembre, membre.dateNaissanceMembre, membre.villeMembre, membre.adresseMailMembre, membre.moustacheJour).then(() => {
+
+        this.membreService.update(this.membre._id, this.membre.pseudoMembre, this.membre.nomMembre, this.membre.prenomMembre, this.membre.photoMoustacheMembre, this.membre.noteMoustacheMembre, this.membre.dateNaissanceMembre, this.membre.villeMembre, this.membre.adresseMailMembre, this.membre.moustacheJour).then(() => {
             this.load()
         })
     }
 
 
-  }
+}

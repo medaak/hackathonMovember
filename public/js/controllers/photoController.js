@@ -1,64 +1,55 @@
 class photoController {
 
     constructor() {
-      var streaming = false,
-          video        = document.querySelector('#video'),
-          canvas       = document.querySelector('#canvas'),
-          photo        = document.querySelector('#photo'),
-          startbutton  = document.querySelector('#startbutton'),
-          width = 480,
-          height = 0;
+      (function () {
+      var takePicture = document.querySelector("#take-picture"),
+          showPicture = document.querySelector("#show-picture");
 
-      navigator.getMedia = ( navigator.getUserMedia ||
-                             navigator.webkitGetUserMedia ||
-                             navigator.mozGetUserMedia ||
-                             navigator.msGetUserMedia);
+      if (takePicture && showPicture) {
+          // Set events
+          takePicture.onchange = function (event) {
+              // Get a reference to the taken picture or chosen file
+              var files = event.target.files,
+                  file;
+              if (files && files.length > 0) {
+                  file = files[0];
+                  console.log(file);
+                  try {
+                      // Get window.URL object
+                      var URL = window.URL || window.webkitURL;
 
-      navigator.getMedia(
-        {
-          video: true,
-          audio: false
-        },
-        function(stream) {
-          if (navigator.mozGetUserMedia) {
-            video.mozSrcObject = stream;
-          } else {
-            var vendorURL = window.URL || window.webkitURL;
-            video.src = vendorURL.createObjectURL(stream);
-          }
-          video.play();
-        },
-        function(err) {
-          console.log("An error occured! " + err);
-        }
-      );
+                      // Create ObjectURL
+                      var imgURL = URL.createObjectURL(file);
+                      console.log(imgURL);
+                      // Set img src to ObjectURL
+                      showPicture.src = imgURL;
 
-      video.addEventListener('canplay', function(ev){
-        if (!streaming) {
-          height = video.videoHeight / (video.videoWidth/width);
-          video.setAttribute('width', width);
-          video.setAttribute('height', height);
-          canvas.setAttribute('width', width);
-          canvas.setAttribute('height', height);
-          streaming = true;
-        }
-      }, false);
-
-      function takepicture() {
-        canvas.width = width;
-        canvas.height = height;
-        canvas.getContext('2d').drawImage(video, 0, 0, width, height);
-        var data = canvas.toDataURL('image/png');
-        photo.setAttribute('src', data);
-        $(".photo").attr('src', data);
+                      // Revoke ObjectURL after imagehas loaded
+                      showPicture.onload = function() {
+                          URL.revokeObjectURL(imgURL);
+                      };
+                  }
+                  catch (e) {
+                      try {
+                          // Fallback if createObjectURL is not supported
+                          var fileReader = new FileReader();
+                          fileReader.onload = function (event) {
+                              showPicture.src = event.target.result;
+                          };
+                          fileReader.readAsDataURL(file);
+                      }
+                      catch (e) {
+                          // Display error message
+                          var error = document.querySelector("#error");
+                          if (error) {
+                              error.innerHTML = "Neither createObjectURL or FileReader are supported";
+                          }
+                      }
+                  }
+              }
+          };
       }
-
-      startbutton.addEventListener('click', function(ev){
-          takepicture();
-        ev.preventDefault();
-      }, false);
-
-
+  })();
     }
 
 }
