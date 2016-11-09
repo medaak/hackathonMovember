@@ -7,7 +7,7 @@ const routes = ($routeProvider, $httpProvider) => {
             controllerAs: 'vm'
         })
         .when('/selectphoto', {
-            templateUrl: 'views/selectphoto.html',
+            templateUrl: 'views/selectphotopc.html',
             controller: 'photoController',
             controllerAs: 'vm'
         })
