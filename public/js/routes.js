@@ -11,6 +11,11 @@ const routes = ($routeProvider, $httpProvider) => {
             controller: 'photoController',
             controllerAs: 'vm'
         })
+        .when('/createMember', {
+            templateUrl: 'views/creerMembre.html',
+            controller: 'creerMembreController',
+            controllerAs: 'vm'
+        })
         .otherwise({
             redirectTo: '/'
         })
