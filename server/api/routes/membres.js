@@ -1,5 +1,5 @@
 import express from 'express';
-import Todo from '../models/membre.js';
+import Membre from '../models/membre.js';
 
 let router = express.Router();
 

@@ -2,13 +2,13 @@
     <fieldset>
 
         <!-- Form Name -->
-        <legend>Form Name</legend>
+        <legend>Create an account</legend>
 
         <!-- Text input-->
         <div class="form-group">
             <label class="col-md-4 control-label" for="textinput">Your username</label>
             <div class="col-md-4">
-                <input id="username" name="username" placeholder="username" class="form-control input-md" type="text">
+                <input id="username" ng-model='membre.pseudoMembre' name="username" placeholder="username" class="form-control input-md" type="text">
             </div>
         </div>
 
@@ -16,7 +16,7 @@
         <div class="form-group">
             <label class="col-md-4 control-label" for="textinput">Your lastname</label>
             <div class="col-md-4">
-                <input id="lastName" name="lastName" placeholder="Your lastname" class="form-control input-md" type="text">
+                <input id="lastName" ng-model='membre.nomMembre' name="lastName" placeholder="Your lastname" class="form-control input-md" type="text">
             </div>
         </div>
 
@@ -24,15 +24,15 @@
         <div class="form-group">
             <label class="col-md-4 control-label" for="textinput">Your firstname</label>
             <div class="col-md-4">
-                <input id="firstName" name="firstName" placeholder="Your firstname" class="form-control input-md" type="text">
+                <input id="firstName" ng-model='membre.prenomMembre' name="firstName" placeholder="Your firstname" class="form-control input-md" type="text">
             </div>
         </div>
 
         <!-- Text input-->
         <div class="form-group">
-            <label class="col-md-4 control-label" for="textinput">Your username</label>
+            <label class="col-md-4 control-label" for="textinput">Your email</label>
             <div class="col-md-4">
-                <input id="userName" name="userName" placeholder="Your username" class="form-control input-md" type="email">
+                <input id="email" ng-model='membre.adresseMailMembre' name="email" placeholder="Your email" class="form-control input-md" type="email">
             </div>
         </div>
 
@@ -40,9 +40,15 @@
         <div class="form-group">
             <label class="col-md-4 control-label" for="textinput">Your password</label>
             <div class="col-md-4">
-                <input id="password" name="password" placeholder="Your password" class="form-control input-md" type="password">
+                <input id="password" ng-model='membre.motDePasseMembre' name="password" placeholder="Your password" class="form-control input-md" type="password">
             </div>
         </div>
 
+        <div class="form-group">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <button id="singlebutton" ng-click='vm.create(membre)' name="singlebutton" class="btn btn-primary">Submit</button>
+            </div>
+        </div>
     </fieldset>
 </form>
