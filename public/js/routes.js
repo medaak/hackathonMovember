@@ -6,11 +6,6 @@ const routes = ($routeProvider, $httpProvider) => {
             controller: 'mainController',
             controllerAs: 'vm'
         })
-        .when('/selectphoto', {
-            templateUrl: 'views/selectphoto.html',
-            controller: 'photoController',
-            controllerAs: 'vm'
-        })
         .when('/createMember', {
             templateUrl: 'views/creerMembre.html',
             controller: 'membreController',
