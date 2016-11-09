@@ -13,7 +13,12 @@ const routes = ($routeProvider, $httpProvider) => {
         })
         .when('/createMember', {
             templateUrl: 'views/creerMembre.html',
-            controller: 'creerMembreController',
+            controller: 'membreController',
+            controllerAs: 'vm'
+        })
+        .when('/profilMember', {
+            templateUrl: 'views/editProfilMembre.html',
+            controller: 'membreEditController',
             controllerAs: 'vm'
         })
         .otherwise({

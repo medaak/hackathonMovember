@@ -70,7 +70,7 @@ export default class Membre {
           photoMoustacheMembre: req.body.photoMoustacheMembre,
           noteMoustacheMembre: req.body.noteMoustacheMembre,
           dateNaissanceMembre: req.body.dateNaissanceMembre,
-          villePhotoMembre: req.body.villeMembre,
+          villeMembre: req.body.villeMembre,
           adresseMailMembre: req.body.adresseMailMembre,
           motDePasseMembre: req.body.motDePasseMembre,
           moustacheJour: req.body.moustacheJour
