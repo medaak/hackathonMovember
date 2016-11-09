@@ -18,6 +18,11 @@ class mainController {
         })
     }
 
+    updatePhoto() {
+        this.todoService.update(todo._id, todo.description).then(() => {
+            this.load()
+        })
+    }
     update(todo) {
         this.todoService.update(todo._id, todo.description).then(() => {
             this.load()
