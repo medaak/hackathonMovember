@@ -1,7 +1,8 @@
-class creerMembreController {
-    constructor(membreService) {
+class membreController {
+    constructor(membreService, $location) {
       this.membreService = membreService;
       this.load();
+      this.$location = $location;
     }
 
     load() {
@@ -11,10 +12,10 @@ class creerMembreController {
     }
 
     create(membre) {
-      console.log(membre.pseudoMembre)
         this.membreService.create(membre.pseudoMembre, membre.nomMembre, membre.prenomMembre, membre.photoMoustacheMembre, membre.noteMoustacheMembre, membre.dateNaissanceMembre, membre.villeMembre, membre.adresseMailMembre, membre.moustacheJour).then(() => {
             this.membre = '';
             this.load()
+            this.$location.path('/')
         })
     }
 

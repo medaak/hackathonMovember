@@ -3,6 +3,7 @@ angular.module('app', ['ngRoute'])
         .service('membreService', membreService)
         .controller('mainController', mainController)
         .controller('photoController', photoController)
-        .controller('creerMembreController',creerMembreController)
+        .controller('membreController', membreController)
+        .controller('membreEditController', membreEditController)
         .config(routes)
         ;
