@@ -1,46 +1,56 @@
 <!DOCTYPE html>
 <html lang="en" ng-app='app'>
-    <head>
 
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
-        <link rel="shortcut icon" href="assets/img/logo.png">
+<head>
 
-        <title>MEAN Starter ES6</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.min.css">
-        <link rel="stylesheet" href="assets/css/style.css">
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
-        <link href="https://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" href="assets/img/logo.png">
 
-    </head>
-    <body>
+    <title>MEAN Starter ES6</title>
 
-        <ng-include src="'views/navbar.html'"></ng-include>
+    <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic" rel="stylesheet" type="text/css">
+    <!-- JsSocials -->
+    <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.jssocials/1.4.0/jssocials.css" />
+    <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.jssocials/1.4.0/jssocials-theme-classic.css" />
+</head>
 
-        <div class="container">
-            <ng-view></ng-view>
-        </div>
+<body>
 
-        <script src="vendor/jquery/dist/jquery.min.js"></script>
-        <script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
-        <script src="vendor/angular/angular.min.js"></script>
-        <script src="vendor/angular-route/angular-route.min.js"></script>
+    <ng-include src="'views/navbar.html'"></ng-include>
 
-        <script src="js/services/todoService.js"></script>
-        <script src="js/services/membreService.js"></script>
-        <script src="js/controllers/mapController.js"></script>
+    <div class="container">
+        <ng-view></ng-view>
+    </div>
+
+    <script src="vendor/jquery/dist/jquery.min.js"></script>
+    <script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="vendor/angular/angular.min.js"></script>
+    <script src="vendor/angular-route/angular-route.min.js"></script>
+
+    <script src="js/services/todoService.js"></script>
+    <script src="js/services/membreService.js"></script>
+    <script src="js/controllers/mapController.js"></script>
 
 
-        <script src="js/controllers/mainController.js"></script>
-        <script src="js/controllers/membreController.js"></script>
-        <script src="js/controllers/membreEditController.js"></script>
-        <script src="js/routes.js"></script>
+    <script src="js/services/todoService.js"></script>
+    <script src="js/services/membreService.js"></script>
 
-        <script src="js/app.js"></script>
+    <script src="js/controllers/mainController.js"></script>
+    <script src="js/controllers/membreController.js"></script>
+    <script src="js/controllers/membreEditController.js"></script>
+    <script src="js/routes.js"></script>
 
-    </body>
+    <script src="js/app.js"></script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.jssocials/1.4.0/jssocials.min.js"></script>
+
+</body>
+
 </html>
