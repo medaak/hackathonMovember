@@ -20,7 +20,7 @@ class mainController {
     create() {
         this.todoService.create(this.todo).then(() => {
             this.todo = '';
-            this.load()
+            this.load();
         })
     }
 
