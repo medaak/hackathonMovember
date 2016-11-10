@@ -12,7 +12,7 @@ class membreController {
     }
 
     create(membre) {
-        this.membreService.create(membre.pseudoMembre, membre.nomMembre, membre.prenomMembre, membre.photoMoustacheMembre, membre.likeMoustacheMembre,  membre.unlikeMoustacheMembre, membre.dateNaissanceMembre, membre.villeMembre, membre.adresseMailMembre, membre.moustacheJour).then(() => {
+        this.membreService.create(membre.pseudoMembre, membre.nomMembre, membre.prenomMembre, membre.photoMoustacheMembre, membre.likeMoustacheMembre,  membre.unlikeMoustacheMembre, membre.villeMembre, membre.longitudeMembre, membre.latitudeMembre, membre.adresseMailMembre, membre.moustacheJour).then(() => {
             this.membre = '';
             this.load()
             this.$location.path('/')
@@ -20,7 +20,7 @@ class membreController {
     }
 
     update(membre) {
-        this.membreService.update(membre._id, membre.pseudoMembre, membre.nomMembre, membre.prenomMembre, membre.photoMoustacheMembre, membre.likeMoustacheMembre,  membre.unlikeMoustacheMembre, membre.dateNaissanceMembre, membre.villeMembre, membre.adresseMailMembre, membre.moustacheJour).then(() => {
+        this.membreService.update(membre._id, membre.pseudoMembre, membre.nomMembre, membre.prenomMembre, membre.photoMoustacheMembre, membre.likeMoustacheMembre,  membre.unlikeMoustacheMembre, membre.villeMembre, membre.longitudeMembre, membre.latitudeMembre, membre.adresseMailMembre, membre.moustacheJour).then(() => {
             this.load()
         })
     }
