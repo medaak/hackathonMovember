@@ -16,35 +16,24 @@ class mainController {
           fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
 
-          function up () {
-            console.log("pass");
-          fieldName = $(this).attr('data-field');
-          cnt = $(fieldName).text();
-          console.log(cnt);
-          btn = $(this);
-          btn.button('loading');
-          setTimeout(function () {
-              cnt++;
-              btn.button('reset');
-              btn.text('  ' + cnt);
-            }, 1000);
-        }
-
-        $("#dislike").click(function () {
-            var fieldName = $(this).attr('data-field');
-            var cnt= $(fieldName).text();
-            var btn = $(this);
+          this.up = (up) => {
+            up = "like" + up;
+            var cnt = Number($("#"+up).text());
             console.log(cnt);
-            console.log(btn);
-            btn.button('loading');
-            setTimeout(function () {
-                if (cnt > 0) {
-                    cnt--;
-                }
-                btn.button('reset');
-                btn.text('  ' + cnt);
-            }, 1000);
-         });
+            cnt++;
+            $("#"+up).text('   ' + cnt);
+            this.updateLike(cnt);
+        };
+
+          this.down = (down) => {
+            down = "dislike" + down;
+            console.log(down);
+            var cnt = Number($("#"+down).text());
+            console.log(cnt);
+            cnt++;
+            $("#"+down).text('   ' + cnt);
+            this.updateDislike(cnt);
+         };
 
     }
 
@@ -68,11 +57,20 @@ class mainController {
     //         this.load()
     //     })
     // }
-    // update(todo) {
-    //     this.todoService.update(todo._id, todo.description).then(() => {
-    //         this.load()
-    //     })
-    // }
+
+    updateLike(cnt) {
+
+        this.memberService.update(member._id, member.likeMoustacheMembre).then(() => {
+            this.load();
+        });
+      }
+
+    updatedisLike(cnt) {
+
+        this.memberService.update(member._id, member.unlikeMoustacheMembre).then(() => {
+            this.load();
+        });
+      }
     //
     // delete(todo) {
     //     this.todoService.delete(todo._id).then(() => {
