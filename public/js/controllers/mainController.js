@@ -3,23 +3,18 @@ class mainController {
     constructor(todoService) {
         this.todoService = todoService;
         this.load();
-        $('.carousel').carousel({
-            interval: 5000 //changes the speed
-        })
 
-        /*#configuration-variables*/
-/*
-var disqus_config = function () {
-this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-};
-*/
-(function() { // DON'T EDIT BELOW THIS LINE
-var d = document, s = d.createElement('script');
-s.src = '//movembermoustache.disqus.com/embed.js';
-s.setAttribute('data-timestamp', +new Date());
-(d.head || d.body).appendChild(s);
-})();
+        $('.carousel').carousel({
+            interval: 500
+        });
+
+        (function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.8";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
 
     }
 
@@ -32,7 +27,7 @@ s.setAttribute('data-timestamp', +new Date());
     create() {
         this.todoService.create(this.todo).then(() => {
             this.todo = '';
-            this.load()
+            this.load();
         })
     }
 
