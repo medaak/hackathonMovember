@@ -92,10 +92,10 @@
                     <div class="panel-footer">
                         <ul class="list-inline">
                             <li>
-                              <button type="button" name="button" class="btn btn-default" id="like{{$index}}" data-field='like{{$index}}' ng-click="vm.up($index)"><span class="glyphicon glyphicon-thumbs-up" ng-model='membre.likeMoustacheMembre'></span>5</button>
+                              <button type="button" name="button" class="btn btn-default" id="like{{$index}}" data-field='like{{$index}}' ng-click="vm.up(membre._id, $index)"><span class="glyphicon glyphicon-thumbs-up" ng-model='membre.likeMoustacheMembre'></span>5</button>
                             </li>
                             <li>
-                                <button type="button" name="button" class="btn btn-default" id="dislike{{$index}}" data-field='dislike{{$index}}' ng-click='vm.down($index)'><span class="glyphicon glyphicon-thumbs-down" ng-model='membre.unlikeMoustacheMembre'></span>0</button>
+                                <button type="button" name="button" class="btn btn-default" id="dislike{{$index}}" data-field='dislike{{$index}}' ng-click='vm.down(membre._id, $index)'><span class="glyphicon glyphicon-thumbs-down" ng-model='membre.unlikeMoustacheMembre'></span>0</button>
                             </li>
                             <li>
                                 <a href='#comment'>

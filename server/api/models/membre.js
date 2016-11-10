@@ -89,6 +89,20 @@ export default class Membre {
         });
     }
 
+    updatelike(req, res) {
+        model.updatelike({
+            _id: req.params.id
+        }, {
+          likeMoustacheMembre:req.body.likeMoustacheMembre,
+          unlikeMoustacheMembre:req.body.unlikeMoustacheMembre
+        }, (err, membre) => {
+            if (err || !membre) {
+                res.status(500).send(err.message);
+            } else {
+                res.json(membre);
+            }
+        });
+    }
 
     delete(req, res) {
         model.findByIdAndRemove(req.params.id, (err) => {
