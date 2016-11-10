@@ -38,7 +38,7 @@ const routes = ($routeProvider, $httpProvider) => {
         })
         .when('/contact', {
             templateUrl: 'views/contact.html',
-            controller: 'mainController',
+            controller: 'newsletterController',
             controllerAs: 'vm'
         })
         .otherwise({
