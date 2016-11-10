@@ -29,7 +29,7 @@ class membreEditController {
         var img = document.getElementById("show-picture").src;
         console.log(img);
         this.membre.photoMoustacheMembre = img;
-        this.membreService.update(this.membre._id, this.membre.pseudoMembre, this.membre.nomMembre, this.membre.prenomMembre, this.membre.photoMoustacheMembre, this.membre.noteMoustacheMembre, this.membre.dateNaissanceMembre, this.membre.villeMembre, this.membre.adresseMailMembre, this.membre.moustacheJour).then(() => {
+        this.membreService.update(this.membre._id, this.membre.pseudoMembre, this.membre.nomMembre, this.membre.prenomMembre, this.membre.photoMoustacheMembre, this.membre.likeMoustacheMembre,  this.membre.unlikeMoustacheMembre, this.membre.dateNaissanceMembre, this.membre.villeMembre, this.membre.adresseMailMembre, this.membre.moustacheJour).then(() => {
             this.load()
         })
     }
