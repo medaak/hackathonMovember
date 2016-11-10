@@ -16,23 +16,24 @@ class mainController {
           fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
 
-          this.up = (up) => {
+          this.up = (id, up) => {
             up = "like" + up;
             var cnt = Number($("#"+up).text());
             console.log(cnt);
             cnt++;
-            $("#"+up).text('   ' + cnt);
-            this.updateLike(cnt);
+            $("#"+up).text(cnt);
+            console.log($("#"+up).text());
+            // this.updateLike(id, cnt);
         };
 
-          this.down = (down) => {
+          this.down = (id, down) => {
             down = "dislike" + down;
             console.log(down);
             var cnt = Number($("#"+down).text());
             console.log(cnt);
             cnt++;
-            $("#"+down).text('   ' + cnt);
-            this.updateDislike(cnt);
+            $("#"+down).text(cnt);
+            // this.updateDislike(id, cnt);
          };
 
     }
@@ -58,16 +59,16 @@ class mainController {
     //     })
     // }
 
-    updateLike(cnt) {
+    updateLike(id, cnt) {
 
-        this.memberService.update(member._id, member.likeMoustacheMembre).then(() => {
+        this.membreService.updatelike(id, cnt).then(() => {
             this.load();
         });
       }
 
-    updatedisLike(cnt) {
+    updateDislike(id, cnt) {
 
-        this.memberService.update(member._id, member.unlikeMoustacheMembre).then(() => {
+        this.membreService.updatedislike(id, cnt).then(() => {
             this.load();
         });
       }

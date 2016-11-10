@@ -15,6 +15,8 @@ module.exports = (app) => {
 
     router.put('/:id', membre.update);
 
+    router.put('/:id', membre.updatelike);
+
     router.delete('/:id', membre.delete);
 
     app.use('/membres', router);
