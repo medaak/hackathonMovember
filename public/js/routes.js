@@ -16,8 +16,23 @@ const routes = ($routeProvider, $httpProvider) => {
             controller: 'membreEditController',
             controllerAs: 'vm'
         })
+        .when('/member', {
+            templateUrl: 'views/member.html',
+            controller: '',
+            controllerAs: 'vm'
+        })
+        .when('/register', {
+            templateUrl: 'views/register.html',
+            controller: '',
+            controllerAs: 'vm'
+        })
+        .when('/showProfile', {
+            templateUrl: 'views/showProfile.html',
+            controller: '',
+            controllerAs: 'vm'
+        })
         .otherwise({
             redirectTo: '/'
-        })
+        });
 
-}
+};
