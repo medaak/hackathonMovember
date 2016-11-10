@@ -33,7 +33,7 @@ const routes = ($routeProvider, $httpProvider) => {
         })
         .when('/showProfile', {
             templateUrl: 'views/showProfile.html',
-            controller: '',
+            controller: 'mainController',
             controllerAs: 'vm'
         })
         .otherwise({
