@@ -4,13 +4,14 @@ class membreService {
         this.$http = $http;
     }
 
-    create(pseudo, nom, prenom, photo, note, date, ville, adresse, pass, moustache) {
+    create(pseudo, nom, prenom, photo, noteplus, notemoins, date, ville, adresse, pass, moustache) {
         return this.$http.post('/api/membres', {
           pseudoMembre: pseudo,
           nomMembre: nom,
           prenomMembre: prenom,
           photoMoustacheMembre: photo,
-          noteMoustacheMembre: note,
+          likeMoustacheMembre: noteplus,
+          unlikeMoustacheMembre: notemoins,
           dateNaissanceMembre: date,
           villeMembre: ville,
           adresseMailMembre: adresse,

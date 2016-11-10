@@ -68,16 +68,16 @@
 
             <hr>
 
-            <div class="col-xs-12 col-md-6">
+            <div class="col-xs-12 col-md-6" ng-repeat='membre in vm.membres | orderBy:"-_id"' id='{{membre._id}}'>
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <ul class="list-inline">
-                            <li>Fred</li>
+                            <li>{{membre.pseudoMembre}}</li>
                             <li class="pull-right">1 day</li>
                         </ul>
                     </div>
                     <div class="panel-image">
-                        <a href="#/showProfile"><img class="cropsize img-responsive center-block panel-image-preview" src="../assets/img/mustache3.jpg"/></a>
+                        <a href="#/showProfile"><img class="cropsize img-responsive center-block panel-image-preview" <img class="img-responsive center-block panel-image-preview" src="{{membre.photoMoustacheMembre}}" />
                     </div>
                     <div class="hidden-xs panel-body">
                         <h4>Show the Description by default!</h4>
@@ -92,214 +92,33 @@
                     <div class="panel-footer">
                         <ul class="list-inline">
                             <li>
-                                <a href="#like">
-                                    <span class="glyphicon glyphicon-thumbs-up"></span>
-                                </a>
-                                <span class="badge">5</span>
+                              <button type="button" name="button" class="btn btn-default" id="like" data-field='like{{$index}}' ng-click='vm.this.up' ><span class="glyphicon glyphicon-thumbs-up"></span>5</button>
                             </li>
                             <li>
-                                <a href="#dislike">
-                                    <span class="glyphicon glyphicon-thumbs-down"></span>
-                                </a>
-                                <span class="badge">0</span>
+                                <button type="button" name="button" class="btn btn-default" id="dislike" data-field='dislike{{$index}}'><span class="glyphicon glyphicon-thumbs-down"></span>0</button>
                             </li>
                             <li>
-                                <a href="#comment">
+                                <a href='#comment'>
                                     <span class="glyphicon glyphicon-comment"></span>
                                 </a>
-                                <span class="badge">10</span>
+                                <span class='badgecomment{{$index}}'>10</span>
                             </li>
                             <li>
-                                <a href="#share">
+                                <a href='#share'>
                                     <span class="glyphicon glyphicon-share-alt"></span>
                                 </a>
-                                <span class="badge">14</span>
+                                <span class='badgeshare{{$index}}'>14</span>
                             </li>
                             <li>
-                                <a href="#views">
+                                <a href='#views'>
                                     <span class="glyphicon glyphicon-eye-open"></span>
                                 </a>
-                                <span class="badge">14</span>
+                                <span class='badgeviews{{$index}}'>14</span>
                             </li>
                         </ul>
                     </div>
                 </div>
             </div>
-
-            <div class="col-xs-12 col-md-6">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <ul class="list-inline">
-                            <li>Roger</li>
-                            <li class="pull-right">5 days</li>
-                        </ul>
-                    </div>
-                    <div class="panel-image">
-                        <img class="cropsize img-responsive center-block panel-image-preview" src="../assets/img/mustache3.jpg"/>
-                    </div>
-                    <div class="hidden-xs panel-body">
-                        <h4>Show the Description by default!</h4>
-                        <blockquote>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                        </blockquote>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in lobortis nisl, vitae iaculis sapien. Phasellus ultrices gravida massa luctus ornare. Suspendisse blandit quam elit, eu imperdiet neque semper et.</p>
-                        <span class="tagz">Tags:
-                            <a>#faking</a>
-                        </span>
-                    </div>
-                    <div class="panel-footer">
-                        <ul class="list-inline">
-                            <li>
-                                <a href="#like">
-                                    <span class="glyphicon glyphicon-thumbs-up"></span>
-                                </a>
-                                <span class="badge">5</span>
-                            </li>
-                            <li>
-                                <a href="#dislike">
-                                    <span class="glyphicon glyphicon-thumbs-down"></span>
-                                </a>
-                                <span class="badge">0</span>
-                            </li>
-                            <li>
-                                <a href="#comment">
-                                    <span class="glyphicon glyphicon-comment"></span>
-                                </a>
-                                <span class="badge">10</span>
-                            </li>
-                            <li>
-                                <a href="#share">
-                                    <span class="glyphicon glyphicon-share-alt"></span>
-                                </a>
-                                <span class="badge">14</span>
-                            </li>
-                            <li>
-                                <a href="#views">
-                                    <span class="glyphicon glyphicon-eye-open"></span>
-                                </a>
-                                <span class="badge">14</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-xs-12 col-md-6">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <ul class="list-inline">
-                            <li>Donald</li>
-                            <li class="pull-right">1 week</li>
-                        </ul>
-                    </div>
-                    <div class="panel-image">
-                        <img class="cropsize img-responsive center-block panel-image-preview" src="../assets/img/mustache3.jpg"/>
-                    </div>
-                    <div class="hidden-xs panel-body">
-                        <h4>Show the Description by default!</h4>
-                        <blockquote>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                        </blockquote>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in lobortis nisl, vitae iaculis sapien. Phasellus ultrices gravida massa luctus ornare. Suspendisse blandit quam elit, eu imperdiet neque semper et.</p>
-                        <span class="tagz">Tags:
-                            <a>#faking</a>
-                        </span>
-                    </div>
-                    <div class="panel-footer">
-                        <ul class="list-inline">
-                            <li>
-                                <a href="#like">
-                                    <span class="glyphicon glyphicon-thumbs-up"></span>
-                                </a>
-                                <span class="badge">5</span>
-                            </li>
-                            <li>
-                                <a href="#dislike">
-                                    <span class="glyphicon glyphicon-thumbs-down"></span>
-                                </a>
-                                <span class="badge">0</span>
-                            </li>
-                            <li>
-                                <a href="#comment">
-                                    <span class="glyphicon glyphicon-comment"></span>
-                                </a>
-                                <span class="badge">10</span>
-                            </li>
-                            <li>
-                                <a href="#share">
-                                    <span class="glyphicon glyphicon-share-alt"></span>
-                                </a>
-                                <span class="badge">14</span>
-                            </li>
-                            <li>
-                                <a href="#views">
-                                    <span class="glyphicon glyphicon-eye-open"></span>
-                                </a>
-                                <span class="badge">14</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-xs-12 col-md-6">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <ul class="list-inline">
-                            <li>Tony</li>
-                            <li class="pull-right">2 weeks</li>
-                        </ul>
-                    </div>
-                    <div class="panel-image">
-                        <img class="cropsize img-responsive center-block panel-image-preview" src="../assets/img/mustache3.jpg"/>
-                    </div>
-                    <div class="hidden-xs panel-body">
-                        <h4>Show the Description by default!</h4>
-                        <blockquote>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                        </blockquote>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in lobortis nisl, vitae iaculis sapien. Phasellus ultrices gravida massa luctus ornare. Suspendisse blandit quam elit, eu imperdiet neque semper et.</p>
-                        <span class="tagz">Tags:
-                            <a>#faking</a>
-                        </span>
-                    </div>
-                    <div class="panel-footer">
-                        <ul class="list-inline">
-                            <li>
-                                <a href="#like">
-                                    <span class="glyphicon glyphicon-thumbs-up"></span>
-                                </a>
-                                <span class="badge">5</span>
-                            </li>
-                            <li>
-                                <a href="#dislike">
-                                    <span class="glyphicon glyphicon-thumbs-down"></span>
-                                </a>
-                                <span class="badge">0</span>
-                            </li>
-                            <li>
-                                <a href="#comment">
-                                    <span class="glyphicon glyphicon-comment"></span>
-                                </a>
-                                <span class="badge">10</span>
-                            </li>
-                            <li>
-                                <a href="#share">
-                                    <span class="glyphicon glyphicon-share-alt"></span>
-                                </a>
-                                <span class="badge">14</span>
-                            </li>
-                            <li>
-                                <a href="#views">
-                                    <span class="glyphicon glyphicon-eye-open"></span>
-                                </a>
-                                <span class="badge">14</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
         </div>
     </div>
 </div>
