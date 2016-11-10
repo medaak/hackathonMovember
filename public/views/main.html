@@ -1,23 +1,306 @@
-<!-- <div class="row">
-    <div class="col-xs-12 col-md-10 col-md-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
-        <h2>Create a new todo</h2>
-        <form class="form-inline">
-            <div class="form-group">
-                <input type="text" class="form-control" placeholder="Todo" ng-model='vm.todo'>
+<div class="row">
+    <div class="box col-xs-12 text-center">
+        <div id="carousel-example-generic" class="carousel slide">
+            <!-- Indicators -->
+            <ol class="carousel-indicators hidden-xs">
+                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img class="img-responsive img-full" src="../assets/img/slider1.jpg" alt="">
+                </div>
+                <div class="item">
+                    <img class="img-responsive img-full" src="../assets/img/slider2.jpg" alt="">
+                </div>
+                <div class="item">
+                    <img class="img-responsive img-full" src="../assets/img/slider3.jpg" alt="">
+                </div>
             </div>
-            <button ng-click='vm.create()' class="btn btn-default">Add</button>
-        </form>
-        <h2 ng-show='vm.todos.length>0'>My todos</h2>
-        <div class="panel panel-default" ng-repeat='todo in vm.todos | orderBy: "description"'>
-            <div class="panel-body">
-                <form class="form-inline">
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Todo" ng-model='todo.description'>
+
+            <!-- Controls -->
+            <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                <span class="icon-prev"></span>
+            </a>
+            <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                <span class="icon-next"></span>
+            </a>
+        </div>
+        <h2 class="brand-before">
+            <small>Welcome to</small>
+        </h2>
+        <h1 class="brand-name">Movember Mustache</h1>
+        <hr class="tagline-divider">
+        <h2>
+            <small>By
+                <strong>Start Bootstrap</strong>
+            </small>
+        </h2>
+    </div>
+</div>
+
+<div class="row">
+
+    <div class="box col-xs-12">
+        <hr>
+        <h2 class="intro-text text-center">Mustache
+            <strong>of the Day</strong>
+        </h2>
+        <hr>
+        <img class="img-responsive img-border img-left" src="assets/img/mustache.jpg" alt="">
+        <hr class="visible-xs">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+            irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <div id="disqus_thread"></div>
+    </div>
+
+    <div class="row">
+
+        <div class="box col-xs-12">
+
+            <hr>
+
+            <h2 class="intro-text text-center">Newest
+                <strong>Members</strong>
+            </h2>
+
+            <hr>
+
+            <div class="col-xs-12 col-md-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <ul class="list-inline">
+                            <li>Fred</li>
+                            <li class="pull-right">1 day</li>
+                        </ul>
                     </div>
-                    <button ng-click='vm.update(todo)' class="btn btn-default">Edit</button>
-                    <button ng-click='vm.delete(todo)' class="btn btn-danger">Delete</button>
-                </form>
+                    <div class="panel-image">
+                        <img class="img-responsive center-block" src="assets/img/mustache3.jpg" class="panel-image-preview"/>
+                    </div>
+                    <div class="hidden-xs panel-body">
+                        <h4>Show the Description by default!</h4>
+                        <blockquote>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                        </blockquote>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in lobortis nisl, vitae iaculis sapien. Phasellus ultrices gravida massa luctus ornare. Suspendisse blandit quam elit, eu imperdiet neque semper et.</p>
+                        <span class="tagz">Tags:
+                            <a>#faking</a>
+                        </span>
+                    </div>
+                    <div class="panel-footer">
+                        <ul class="list-inline">
+                            <li>
+                                <a href="#like">
+                                    <span class="glyphicon glyphicon-thumbs-up"></span>
+                                </a>
+                                <span class="badge">5</span>
+                            </li>
+                            <li>
+                                <a href="#dislike">
+                                    <span class="glyphicon glyphicon-thumbs-down"></span>
+                                </a>
+                                <span class="badge">0</span>
+                            </li>
+                            <li>
+                                <a href="#comment">
+                                    <span class="glyphicon glyphicon-comment"></span>
+                                </a>
+                                <span class="badge">10</span>
+                            </li>
+                            <li>
+                                <a href="#share">
+                                    <span class="glyphicon glyphicon-share-alt"></span>
+                                </a>
+                                <span class="badge">14</span>
+                            </li>
+                            <li>
+                                <a href="#views">
+                                    <span class="glyphicon glyphicon-eye-open"></span>
+                                </a>
+                                <span class="badge">14</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
+
+            <div class="col-xs-12 col-md-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <ul class="list-inline">
+                            <li>Roger</li>
+                            <li class="pull-right">5 days</li>
+                        </ul>
+                    </div>
+                    <div class="panel-image">
+                        <img class="img-responsive center-block" src="assets/img/mustache3.jpg" class="panel-image-preview"/>
+                    </div>
+                    <div class="hidden-xs panel-body">
+                        <h4>Show the Description by default!</h4>
+                        <blockquote>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                        </blockquote>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in lobortis nisl, vitae iaculis sapien. Phasellus ultrices gravida massa luctus ornare. Suspendisse blandit quam elit, eu imperdiet neque semper et.</p>
+                        <span class="tagz">Tags:
+                            <a>#faking</a>
+                        </span>
+                    </div>
+                    <div class="panel-footer">
+                        <ul class="list-inline">
+                            <li>
+                                <a href="#like">
+                                    <span class="glyphicon glyphicon-thumbs-up"></span>
+                                </a>
+                                <span class="badge">5</span>
+                            </li>
+                            <li>
+                                <a href="#dislike">
+                                    <span class="glyphicon glyphicon-thumbs-down"></span>
+                                </a>
+                                <span class="badge">0</span>
+                            </li>
+                            <li>
+                                <a href="#comment">
+                                    <span class="glyphicon glyphicon-comment"></span>
+                                </a>
+                                <span class="badge">10</span>
+                            </li>
+                            <li>
+                                <a href="#share">
+                                    <span class="glyphicon glyphicon-share-alt"></span>
+                                </a>
+                                <span class="badge">14</span>
+                            </li>
+                            <li>
+                                <a href="#views">
+                                    <span class="glyphicon glyphicon-eye-open"></span>
+                                </a>
+                                <span class="badge">14</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-md-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <ul class="list-inline">
+                            <li>Donald</li>
+                            <li class="pull-right">1 week</li>
+                        </ul>
+                    </div>
+                    <div class="panel-image">
+                        <img class="img-responsive center-block" src="assets/img/mustache3.jpg" class="panel-image-preview"/>
+                    </div>
+                    <div class="hidden-xs panel-body">
+                        <h4>Show the Description by default!</h4>
+                        <blockquote>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                        </blockquote>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in lobortis nisl, vitae iaculis sapien. Phasellus ultrices gravida massa luctus ornare. Suspendisse blandit quam elit, eu imperdiet neque semper et.</p>
+                        <span class="tagz">Tags:
+                            <a>#faking</a>
+                        </span>
+                    </div>
+                    <div class="panel-footer">
+                        <ul class="list-inline">
+                            <li>
+                                <a href="#like">
+                                    <span class="glyphicon glyphicon-thumbs-up"></span>
+                                </a>
+                                <span class="badge">5</span>
+                            </li>
+                            <li>
+                                <a href="#dislike">
+                                    <span class="glyphicon glyphicon-thumbs-down"></span>
+                                </a>
+                                <span class="badge">0</span>
+                            </li>
+                            <li>
+                                <a href="#comment">
+                                    <span class="glyphicon glyphicon-comment"></span>
+                                </a>
+                                <span class="badge">10</span>
+                            </li>
+                            <li>
+                                <a href="#share">
+                                    <span class="glyphicon glyphicon-share-alt"></span>
+                                </a>
+                                <span class="badge">14</span>
+                            </li>
+                            <li>
+                                <a href="#views">
+                                    <span class="glyphicon glyphicon-eye-open"></span>
+                                </a>
+                                <span class="badge">14</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-md-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <ul class="list-inline">
+                            <li>Tony</li>
+                            <li class="pull-right">2 weeks</li>
+                        </ul>
+                    </div>
+                    <div class="panel-image">
+                        <img class="img-responsive center-block" src="assets/img/mustache3.jpg" class="panel-image-preview"/>
+                    </div>
+                    <div class="hidden-xs panel-body">
+                        <h4>Show the Description by default!</h4>
+                        <blockquote>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                        </blockquote>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in lobortis nisl, vitae iaculis sapien. Phasellus ultrices gravida massa luctus ornare. Suspendisse blandit quam elit, eu imperdiet neque semper et.</p>
+                        <span class="tagz">Tags:
+                            <a>#faking</a>
+                        </span>
+                    </div>
+                    <div class="panel-footer">
+                        <ul class="list-inline">
+                            <li>
+                                <a href="#like">
+                                    <span class="glyphicon glyphicon-thumbs-up"></span>
+                                </a>
+                                <span class="badge">5</span>
+                            </li>
+                            <li>
+                                <a href="#dislike">
+                                    <span class="glyphicon glyphicon-thumbs-down"></span>
+                                </a>
+                                <span class="badge">0</span>
+                            </li>
+                            <li>
+                                <a href="#comment">
+                                    <span class="glyphicon glyphicon-comment"></span>
+                                </a>
+                                <span class="badge">10</span>
+                            </li>
+                            <li>
+                                <a href="#share">
+                                    <span class="glyphicon glyphicon-share-alt"></span>
+                                </a>
+                                <span class="badge">14</span>
+                            </li>
+                            <li>
+                                <a href="#views">
+                                    <span class="glyphicon glyphicon-eye-open"></span>
+                                </a>
+                                <span class="badge">14</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
-</div> -->
+</div>
