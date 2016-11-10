@@ -84,6 +84,7 @@ export default class Membre {
         });
     }
 
+
     delete(req, res) {
         model.findByIdAndRemove(req.params.id, (err) => {
             if (err) {

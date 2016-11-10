@@ -23,7 +23,7 @@ const routes = ($routeProvider, $httpProvider) => {
         })
         .when('/member', {
             templateUrl: 'views/member.html',
-            controller: '',
+            controller: 'membreController',
             controllerAs: 'vm'
         })
         .when('/register', {

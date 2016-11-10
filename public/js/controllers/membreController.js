@@ -3,6 +3,11 @@ class membreController {
       this.membreService = membreService;
       this.load();
       this.$location = $location;
+
+      this.isToggled = false;
+      this.register = function() {
+            this.isToggled = !this.isToggled;
+          };
     }
 
     load() {
