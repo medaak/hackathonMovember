@@ -5,7 +5,7 @@ class mainController {
         this.load();
 
         $('.carousel').carousel({
-            interval: 500
+            interval: 5000
         });
 
         (function(d, s, id) {

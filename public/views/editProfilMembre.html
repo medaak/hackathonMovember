@@ -1,69 +1,81 @@
-<form class="form-horizontal">
-      <!-- Text input-->
-    <div class="form-group">
-        <label class="col-md-4 control-label" for="textinput">Your username</label>
-        <div class="col-md-4">
-            <input id="editUserName" ng-model='vm.membre.pseudoMembre' name="userName" placeholder="Your username" class="form-control input-md" type="text">
-        </div>
+<div class="box row">
+
+    <div class="col-lg-12">
+        <hr>
+        <h2 class="intro-text text-center">Member
+        <strong>Area</strong>
+      </h2>
+        <hr>
     </div>
 
-    <!-- Text input-->
-    <div class="form-group">
-        <label class="col-md-4 control-label" for="textinput">Your lastname</label>
-        <div class="col-md-4">
-            <input id="editLastName" ng-model='vm.membre.nomMembre' name="lastName" placeholder="Your lastname" class="form-control input-md" type="text">
+    <form class="form-horizontal">
+        <!-- Text input-->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="textinput">Your User Name</label>
+            <div class="col-md-4">
+                <input id="editUserName" ng-model='vm.membre.pseudoMembre' name="userName" placeholder="Your username" class="form-control input-md" type="text">
+            </div>
         </div>
-    </div>
 
-    <!-- Text input-->
-    <div class="form-group">
-        <label class="col-md-4 control-label" for="textinput">Your firstname</label>
-        <div class="col-md-4">
-            <input id="editFirstName" ng-model='vm.membre.prenomMembre' name="firstName" placeholder="Your firstname" class="form-control input-md" type="text">
+        <!-- Text input-->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="textinput">Your Last Name</label>
+            <div class="col-md-4">
+                <input id="editLastName" ng-model='vm.membre.nomMembre' name="lastName" placeholder="Your lastname" class="form-control input-md" type="text">
+            </div>
         </div>
-    </div>
 
-    <!-- Button -->
-    <div class="form-group">
-        <label class="col-md-4 control-label" for="singlebutton">Add a picture of your mustache</label>
-        <div class="col-md-4">
-          <p><input class="btn btn-primary" type="file" id="take-picture" accept="image/*"></p>
-          <p><img src="about:blank" alt="" id="show-picture"></p>
+        <!-- Text input-->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="textinput">Your First Name</label>
+            <div class="col-md-4">
+                <input id="editFirstName" ng-model='vm.membre.prenomMembre' name="firstName" placeholder="Your firstname" class="form-control input-md" type="text">
+            </div>
         </div>
-    </div>
-    <!-- Text input-->
-    <div class="form-group">
-        <label class="col-md-4 control-label" for="textinput">Your date of birth</label>
-        <div class="col-md-4">
-            <input id="editDate" ng-model='vm.membre.dateNaissanceMembre' name="birthDate" placeholder="Your lastname" class="form-control input-md" type="text">
+        <!-- Text input-->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="textinput">Your Birth Date</label>
+            <div class="col-md-4">
+                <input id="editDate" ng-model='vm.membre.dateNaissanceMembre' name="birthDate" placeholder="Your lastname" class="form-control input-md" type="text">
+            </div>
         </div>
-    </div>
-    <!-- Text input-->
-    <div class="form-group">
-        <label class="col-md-4 control-label" for="textinput">Your city</label>
-        <div class="col-md-4">
-            <input id="editVille" ng-model='vm.membre.villeMembre' name="city" placeholder="Your city" class="form-control input-md" type="text">
+        <!-- Text input-->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="textinput">Your City</label>
+            <div class="col-md-4">
+                <input id="editVille" ng-model='vm.membre.villeMembre' name="city" placeholder="Your city" class="form-control input-md" type="text">
+            </div>
         </div>
-    </div>
-    <!-- Text input-->
-    <div class="form-group">
-        <label class="col-md-4 control-label" for="textinput">Your mail adress</label>
-        <div class="col-md-4">
-            <input id="editMailAdress" ng-model='vm.membre.adresseMailMembre' name="mail" placeholder="Your mail adress" class="form-control input-md" type="text">
+        <!-- Text input-->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="textinput">Your Email Address</label>
+            <div class="col-md-4">
+                <input id="editMailAdress" ng-model='vm.membre.adresseMailMembre' name="mail" placeholder="Your mail adress" class="form-control input-md" type="text">
+            </div>
         </div>
-    </div>
-    <!-- Text input-->
-    <div class="form-group">
-        <label class="col-md-4 control-label" for="textinput">Your password</label>
-        <div class="col-md-4">
-            <input id="editPassword" ng-model='vm.membre.motDePasseMembre' name="Password" placeholder="Change your password" class="form-control input-md" type="text">
+        <!-- Text input-->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="textinput">Your Password</label>
+            <div class="col-md-4">
+                <input id="editPassword" ng-model='vm.membre.motDePasseMembre' name="Password" placeholder="Change your password" class="form-control input-md" type="text">
+            </div>
         </div>
-    </div>
-    <!-- Button -->
-    <div class="form-group">
-        <label class="col-md-4 control-label" for="singlebutton"></label>
-        <div class="col-md-4">
-            <button id="submitEdit" ng-click='vm.update(membre)' name="singlebutton" class="btn btn-primary">Submit</button>
+        <!-- Button -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="singlebutton">Upload your Mustache</label>
+            <div class="col-md-4">
+                <p><input class="btn btn-primary" type="file" id="take-picture" accept="image/*"></p>
+                <p><img src="about:blank" alt="" id="show-picture"></p>
+            </div>
         </div>
-    </div>
-</form>
+        <!-- Button -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="singlebutton"></label>
+            <div class="col-md-4">
+                <button id="submitEdit" ng-click='vm.update(membre)' name="singlebutton" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+
+    </form>
+
+</div>
