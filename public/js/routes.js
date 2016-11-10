@@ -6,6 +6,11 @@ const routes = ($routeProvider, $httpProvider) => {
             controller: 'mainController',
             controllerAs: 'vm'
         })
+        .when('/map', {
+            templateUrl: 'views/map.html',
+            controller: 'mapController',
+            controllerAs: 'vm'
+        })
         .when('/createMember', {
             templateUrl: 'views/creerMembre.html',
             controller: 'membreController',
