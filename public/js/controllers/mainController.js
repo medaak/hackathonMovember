@@ -3,6 +3,9 @@ class mainController {
     constructor(todoService) {
         this.todoService = todoService;
         this.load();
+        $('.carousel').carousel({
+            interval: 5000 //changes the speed
+        })
     }
 
     load() {

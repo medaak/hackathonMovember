@@ -1,6 +1,6 @@
 body {
     font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    background: url('../../img/noise.png') fixed;
+    background: url('/assets/img/noise.png') fixed;
 }
 
 h1, h2, h3, h4, h5, h6 {

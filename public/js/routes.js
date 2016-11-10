@@ -7,7 +7,7 @@ const routes = ($routeProvider, $httpProvider) => {
             controllerAs: 'vm'
         })
         .when('/createMember', {
-            templateUrl: 'views/creerMembre.html',
+            templateUrl: 'views/register.html',
             controller: 'membreController',
             controllerAs: 'vm'
         })
